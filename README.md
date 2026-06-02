@@ -1,160 +1,386 @@
-# JobScope Tech BR
+<div align="center">
+  <img src="./icon.png" alt="JobScope Tech BR Logo" width="120" height="120" />
 
-> **Produto de dados sobre o mercado de vagas tech no Brasil.**  
-> Coleta real, normalização de dados bagunçados, taxonomia de skills, deduplicação pragmática, API e dashboard.
+  <h1>JobScope Tech BR</h1>
 
-<p align="left">
-  <img alt="status" src="https://img.shields.io/badge/status-em%20desenvolvimento-0f766e">
-  <img alt="scope" src="https://img.shields.io/badge/scope-V1%20enxuta-1f2937">
-  <img alt="stack" src="https://img.shields.io/badge/stack-FastAPI%20%7C%20Next.js%20%7C%20Postgres-0ea5e9">
-  <img alt="license" src="https://img.shields.io/badge/license-MIT-111827">
-</p>
+  <p><strong>Produto de dados sobre o mercado de vagas tech no Brasil</strong></p>
+  <p><strong>Data product for the Brazilian tech job market</strong></p>
 
----
+  <p>
+    <a href="#pt-br">PT-BR</a> •
+    <a href="#en">English</a> •
+    <a href="#stack--tecnologias">Stack</a> •
+    <a href="#arquitetura--architecture">Arquitetura</a> •
+    <a href="#api-prevista--planned-api">API</a> •
+    <a href="#autor--author">Autor</a>
+  </p>
 
-## Visão geral
+  <p>
+    <img src="https://img.shields.io/badge/status-em%20desenvolvimento-0f766e.svg" alt="Status em desenvolvimento" />
+    <img src="https://img.shields.io/badge/scope-V1%20enxuta-1f2937.svg" alt="V1 enxuta" />
+    <img src="https://img.shields.io/badge/backend-FastAPI-009688.svg?logo=fastapi&logoColor=white" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/frontend-Next.js-black.svg?logo=next.js&logoColor=white" alt="Next.js" />
+    <img src="https://img.shields.io/badge/database-PostgreSQL-4169E1.svg?logo=postgresql&logoColor=white" alt="PostgreSQL" />
+    <img src="https://img.shields.io/badge/license-MIT-111827.svg" alt="MIT License" />
+  </p>
 
-O **JobScope Tech BR** é um projeto flagship de portfólio construído para transformar vagas tech dispersas e pouco estruturadas em um produto analítico navegável.
-
-A ideia central é simples, mas forte: **não basta coletar vagas; é preciso transformar texto bagunçado em sinal de mercado útil**. Por isso, o projeto combina coleta real, parsing por fonte, normalização de campos, taxonomia simples de skills, deduplicação básica, persistência relacional, API e interface web.
-
-O resultado desejado é um produto que pareça trabalho real de time, não apenas um exercício técnico. A aplicação deve ser capaz de responder perguntas como:
-
-- quais skills aparecem com mais frequência;
-- quais stacks dominam o mercado;
-- como as vagas se distribuem por senioridade;
-- quais modalidades de trabalho aparecem mais;
-- quais combinações de skills se repetem;
-- quais sinais o mercado emite para quem quer entrar ou se reposicionar.
-
----
-
-## Problema que o projeto resolve
-
-As vagas tech no Brasil estão espalhadas por múltiplas fontes, com descrições inconsistentes e pouca padronização.
-
-Na prática, isso causa três problemas principais:
-
-1. **Comparação difícil**  
-   Títulos, descrições e requisitos mudam muito de uma empresa para outra.
-
-2. **Dados pouco estruturados**  
-   Skills aparecem misturadas com benefícios, contexto da empresa, requisitos e texto de marketing.
-
-3. **Leitura de mercado lenta**  
-   É trabalhoso responder perguntas simples sem ler centenas de vagas manualmente.
-
-O JobScope existe para reduzir esse atrito e mostrar, de forma clara, o que o mercado está pedindo.
+  <p>
+    <a href="https://barujafe.vercel.app/"><strong>🌐 Portfólio</strong></a> •
+    <a href="https://github.com/BarujaFe1"><strong>🐙 GitHub</strong></a> •
+    <a href="https://www.linkedin.com/in/barujafe/"><strong>💼 LinkedIn</strong></a>
+  </p>
+</div>
 
 ---
 
-## Por que este projeto existe
+<a id="pt-br"></a>
 
-Este projeto foi pensado para provar capacidade de construir um **data product end-to-end**.
+## 🇧🇷 PT-BR
 
-Ele mostra que eu consigo:
+## 📊 Visão geral
 
-- coletar dados reais;
-- tratar dados bagunçados;
-- modelar persistência;
-- criar uma API útil;
-- construir uma interface com UX clara;
-- tomar decisões de escopo com disciplina;
-- publicar um projeto com cara de produto real.
+**JobScope Tech BR** é um projeto flagship de portfólio criado para transformar vagas tech dispersas, ruidosas e pouco estruturadas em um produto analítico navegável.
 
-Em outras palavras: este projeto foi desenhado para funcionar como um ativo de carreira, não como um experimento isolado.
+A ideia central é simples, mas forte: **não basta coletar vagas; é preciso transformar texto bagunçado em sinal de mercado útil**.
 
----
+Por isso, o projeto combina coleta real, parsing por fonte, normalização de campos, taxonomia de skills, deduplicação pragmática, persistência relacional, API e interface web.
 
-## O que o projeto quer provar
+O resultado esperado é um produto que pareça trabalho real de time, e não apenas um exercício técnico.
 
-O **JobScope Tech BR** foi criado para demonstrar que eu consigo unir:
-
-- **estatística aplicada** com leitura de padrões de mercado;
-- **data engineering** com coleta e pipeline;
-- **backend/API** com FastAPI e Postgres;
-- **analytics** com taxonomia e agregações;
-- **product thinking** com escopo firme;
-- **UX** com uma interface clara e navegável;
-- **documentação técnica** com narrativa de portfólio.
+> **Objetivo:** mostrar o que o mercado tech brasileiro está pedindo por meio de dados coletados, normalizados, classificados e visualizados com clareza.
 
 ---
 
-## O que entra na V1
+## 🎯 Problema que resolve
 
-A primeira versão será propositalmente enxuta.
+As vagas tech no Brasil estão espalhadas por múltiplas fontes, com descrições inconsistentes e baixa padronização.
 
-### V1 inclui
-- 2 fontes iniciais de vagas;
-- coleta confiável e repetível;
-- parser por fonte;
-- normalização de senioridade, modalidade e localidade;
-- taxonomia inicial de skills por dicionário + aliases;
-- deduplicação pragmática;
-- persistência em PostgreSQL;
-- API mínima para consulta;
-- dashboard com poucos gráficos, mas bons;
-- tabela/lista de vagas;
-- drawer ou página de detalhe;
-- status básico do pipeline;
-- seed/demo data;
-- deploy público.
+Na prática, isso cria três problemas principais:
 
-### V1 não inclui
-- 3+ fontes;
-- LLM para extração;
-- NLP pesado;
-- salary parsing sofisticado;
-- auth;
-- alertas;
-- recomendação de vagas;
-- matching de currículo;
-- tempo real;
-- arquitetura distribuída;
-- qualquer feature bonita que não aumente a chance de terminar.
+### 1. Comparação difícil
+
+Títulos, descrições, senioridades e requisitos variam muito entre empresas e plataformas.
+
+### 2. Dados pouco estruturados
+
+Skills aparecem misturadas com benefícios, contexto da empresa, requisitos obrigatórios, diferenciais e texto de marketing.
+
+### 3. Leitura de mercado lenta
+
+É trabalhoso responder perguntas simples sem ler centenas de vagas manualmente.
+
+O **JobScope Tech BR** existe para reduzir esse atrito e mostrar, de forma clara, quais sinais o mercado está emitindo.
 
 ---
 
-## Stack prevista
+## 🧠 Perguntas que o produto responde
+
+A aplicação deve ajudar a responder perguntas como:
+
+- Quais skills aparecem com mais frequência?
+- Quais stacks dominam o mercado?
+- Como as vagas se distribuem por senioridade?
+- Quais modalidades de trabalho aparecem mais?
+- Quais localidades concentram oportunidades?
+- Quais combinações de skills se repetem?
+- Quais sinais são úteis para quem quer entrar ou se reposicionar na área tech?
+
+---
+
+## 💼 Por que este projeto existe
+
+O JobScope foi pensado para provar capacidade de construir um **data product end-to-end**.
+
+Ele demonstra:
+
+- coleta de dados reais;
+- tratamento de dados bagunçados;
+- modelagem de persistência;
+- criação de API útil;
+- construção de interface com UX clara;
+- disciplina de escopo;
+- documentação técnica forte;
+- narrativa de portfólio orientada a produto.
+
+Em outras palavras: este projeto foi desenhado para funcionar como ativo de carreira, não como experimento isolado.
+
+---
+
+## ✅ O que entra na V1
+
+A primeira versão será propositalmente enxuta, terminável e publicável.
+
+### Inclui
+
+- 2 fontes iniciais de vagas.
+- Coleta confiável e repetível.
+- Parser por fonte.
+- Normalização de senioridade, modalidade e localidade.
+- Taxonomia inicial de skills por dicionário e aliases.
+- Deduplicação pragmática.
+- Persistência em PostgreSQL.
+- API mínima para consulta.
+- Dashboard com poucos gráficos, mas bons.
+- Tabela/lista de vagas.
+- Drawer ou página de detalhe.
+- Status básico do pipeline.
+- Seed/demo data.
+- Deploy público.
+
+### Não inclui
+
+- 3+ fontes.
+- LLM para extração.
+- NLP pesado.
+- Salary parsing sofisticado.
+- Autenticação.
+- Alertas.
+- Recomendação de vagas.
+- Matching de currículo.
+- Tempo real.
+- Arquitetura distribuída.
+- Features bonitas que não aumentam a chance de terminar.
+
+---
+
+## ✨ Capacidades planejadas
+
+### Dashboard
+
+- Total de vagas.
+- Empresas únicas.
+- Skills mais frequentes.
+- Distribuição por senioridade.
+- Distribuição por modalidade.
+- Localidades mais comuns.
+
+### Lista de vagas
+
+- Filtro por senioridade.
+- Filtro por modalidade.
+- Filtro por skill.
+- Busca simples.
+- Ordenação básica.
+- Navegação para detalhe.
+
+### Detalhe da vaga
+
+- Descrição tratada.
+- Skills detectadas.
+- Fonte original.
+- Link original.
+- Datas relevantes.
+- Metadados do parsing.
+
+### Pipeline
+
+- Execução por fonte.
+- Coleta de novos dados.
+- Controle de duplicatas.
+- Status de saúde.
+- Histórico de coleta.
+
+---
+
+<a id="en"></a>
+
+## 🇺🇸 English
+
+## 📊 Overview
+
+**JobScope Tech BR** is a flagship portfolio project created to transform scattered, noisy and poorly structured Brazilian tech job postings into a navigable analytical product.
+
+The core idea is simple but strong: **collecting job posts is not enough; messy text must be transformed into useful market signals**.
+
+The project combines real data collection, source-specific parsing, field normalization, skill taxonomy, pragmatic deduplication, relational persistence, API serving and a web interface.
+
+The expected result is a product that feels like real team work, not just a technical exercise.
+
+> **Goal:** reveal what the Brazilian tech market is asking for through data that is collected, normalized, classified and visualized clearly.
+
+---
+
+## 🎯 Problem solved
+
+Tech job postings in Brazil are spread across multiple sources, with inconsistent descriptions and little standardization.
+
+This creates three main problems:
+
+### 1. Hard comparison
+
+Titles, descriptions, seniority levels and requirements vary significantly across companies and platforms.
+
+### 2. Poorly structured data
+
+Skills are mixed with benefits, company context, required qualifications, nice-to-haves and marketing copy.
+
+### 3. Slow market reading
+
+It is hard to answer simple questions without manually reading hundreds of job posts.
+
+**JobScope Tech BR** reduces this friction and makes market signals clearer.
+
+---
+
+## 🧠 Questions the product answers
+
+The application should help answer questions such as:
+
+- Which skills appear most often?
+- Which stacks dominate the market?
+- How are jobs distributed by seniority?
+- Which work models appear most frequently?
+- Which locations concentrate opportunities?
+- Which skill combinations repeat?
+- Which signals are useful for people trying to enter or reposition in tech?
+
+---
+
+## 💼 Why this project exists
+
+JobScope was designed to prove the ability to build an **end-to-end data product**.
+
+It demonstrates:
+
+- real data collection;
+- messy data handling;
+- persistence modeling;
+- useful API design;
+- clear UX for data exploration;
+- disciplined scope decisions;
+- strong technical documentation;
+- product-oriented portfolio narrative.
+
+In other words: this project was designed as a career asset, not an isolated experiment.
+
+---
+
+## ✅ What goes into V1
+
+The first version is intentionally lean, finishable and publishable.
+
+### Included
+
+- 2 initial job sources.
+- Reliable and repeatable collection.
+- Source-specific parser.
+- Normalization of seniority, work model and location.
+- Initial skill taxonomy using dictionary and aliases.
+- Pragmatic deduplication.
+- PostgreSQL persistence.
+- Minimal query API.
+- Dashboard with few but useful charts.
+- Job table/list.
+- Detail drawer or page.
+- Basic pipeline status.
+- Seed/demo data.
+- Public deployment.
+
+### Not included
+
+- 3+ sources.
+- LLM-based extraction.
+- Heavy NLP.
+- Sophisticated salary parsing.
+- Authentication.
+- Alerts.
+- Job recommendation.
+- Resume matching.
+- Real-time processing.
+- Distributed architecture.
+- Attractive features that reduce the chance of shipping.
+
+---
+
+## ✨ Planned capabilities
+
+### Dashboard
+
+- Total jobs.
+- Unique companies.
+- Most frequent skills.
+- Seniority distribution.
+- Work model distribution.
+- Most common locations.
+
+### Job list
+
+- Filter by seniority.
+- Filter by work model.
+- Filter by skill.
+- Simple search.
+- Basic sorting.
+- Navigation to detail.
+
+### Job detail
+
+- Cleaned description.
+- Detected skills.
+- Original source.
+- Original link.
+- Relevant dates.
+- Parsing metadata.
+
+### Pipeline
+
+- Execution by source.
+- New data collection.
+- Duplicate control.
+- Health status.
+- Collection history.
+
+---
+
+<a id="stack--tecnologias"></a>
+
+## 🛠️ Stack / Tecnologias
 
 ### Backend
-- Python
-- FastAPI
-- SQLAlchemy
-- Alembic
-- Pydantic
+
+- **Python**
+- **FastAPI**
+- **SQLAlchemy**
+- **Alembic**
+- **Pydantic**
 
 ### Data pipeline
-- Python
-- httpx / requests
-- BeautifulSoup
-- regex
-- scripts CLI
 
-### Banco
-- PostgreSQL
+- **Python**
+- **httpx / requests**
+- **BeautifulSoup**
+- **regex**
+- **CLI scripts**
+
+### Database
+
+- **PostgreSQL**
 
 ### Frontend
-- Next.js (App Router)
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- gráficos leves
 
-### Qualidade e dev
-- pytest
-- Ruff
-- ESLint
-- Docker Compose
-- GitHub Actions
+- **Next.js App Router**
+- **TypeScript**
+- **Tailwind CSS**
+- **shadcn/ui**
+- Lightweight charts
+
+### Quality and development
+
+- **pytest**
+- **Ruff**
+- **ESLint**
+- **Docker Compose**
+- **GitHub Actions**
 
 ### Deploy
-- Vercel para frontend
-- Railway para backend e banco
+
+- **Vercel** for frontend
+- **Railway** for backend and database
 
 ---
 
-## Arquitetura resumida
+<a id="arquitetura--architecture"></a>
+
+## 🏗️ Arquitetura / Architecture
 
 ```mermaid
 flowchart LR
@@ -169,67 +395,50 @@ flowchart LR
     I --> J[Next.js Dashboard]
 ```
 
-### Camadas do sistema
+### Camadas do sistema / System layers
 
-#### Coleta
-Cada fonte é coletada separadamente, para reduzir acoplamento e facilitar manutenção.
-
-#### Parsing
-Cada coletor tem seu parser, responsável por converter o formato bruto em estrutura canônica.
-
-#### Normalização
-Campos como senioridade, modalidade e localidade são padronizados para permitir comparação.
-
-#### Taxonomia
-Skills são detectadas com dicionário, aliases e regras simples.
-
-#### Persistência
-PostgreSQL guarda tanto o dado bruto quanto o dado normalizado.
-
-#### Serving
-FastAPI expõe os dados por meio de endpoints mínimos e claros.
-
-#### Interface
-Next.js organiza a leitura dos dados em dashboard, lista e detalhe.
+| Camada | Responsabilidade |
+|---|---|
+| Coleta | Cada fonte é coletada separadamente para reduzir acoplamento |
+| Parsing | Cada coletor tem parser próprio para converter bruto em estrutura canônica |
+| Normalização | Padroniza senioridade, modalidade e localidade |
+| Taxonomia | Detecta skills por dicionário, aliases e regras simples |
+| Persistência | PostgreSQL guarda dado bruto e normalizado |
+| Serving | FastAPI expõe endpoints mínimos e claros |
+| Interface | Next.js organiza leitura em dashboard, lista e detalhe |
 
 ---
 
-## Capacidades planejadas
+## 🔄 Data Flow / Fluxo de dados
 
-### Dashboard
-- total de vagas;
-- empresas únicas;
-- skills mais frequentes;
-- senioridade;
-- modalidade;
-- localidades mais comuns.
-
-### Lista de vagas
-- filtros por senioridade;
-- filtros por modalidade;
-- filtros por skill;
-- busca simples;
-- ordenação básica;
-- navegação para detalhe.
-
-### Detalhe da vaga
-- descrição tratada;
-- skills detectadas;
-- fonte original;
-- link original;
-- datas relevantes.
-
-### Pipeline
-- execução por fonte;
-- coleta de novos dados;
-- controle de duplicatas;
-- status de saúde.
+```txt
+Job Sources
+   ↓
+Collectors
+   ↓
+Raw Jobs
+   ↓
+Source Parsers
+   ↓
+Normalizers
+   ↓
+Skill Taxonomy
+   ↓
+Deduplication
+   ↓
+PostgreSQL
+   ↓
+FastAPI
+   ↓
+Next.js Dashboard
+```
 
 ---
 
-## Modelo de dados
+## 🧬 Modelo de dados / Data model
 
-### Entidades principais
+### Entidades principais / Main entities
+
 - `sources`
 - `collection_runs`
 - `raw_jobs`
@@ -238,59 +447,72 @@ Next.js organiza a leitura dos dados em dashboard, lista e detalhe.
 - `skills`
 - `job_skills`
 
-### Campos essenciais da vaga
-- título;
-- empresa;
-- senioridade;
-- modalidade;
-- localidade;
-- fonte;
-- link original;
-- descrição tratada;
-- skills detectadas;
-- data de coleta;
-- data da vaga, quando existir.
+### Campos essenciais da vaga / Essential job fields
 
-### Estratégia de persistência
-O dado bruto é preservado em `raw_jobs`, para permitir auditoria e reprocessamento.  
-O dado tratado vai para `jobs`, permitindo servir a aplicação com uma estrutura limpa e consistente.
+- title;
+- company;
+- seniority;
+- work model;
+- location;
+- source;
+- original link;
+- cleaned description;
+- detected skills;
+- collected date;
+- job publication date, when available.
+
+### Estratégia de persistência / Persistence strategy
+
+Raw data is preserved in `raw_jobs` for auditing and reprocessing.
+
+Cleaned data goes to `jobs`, allowing the application to serve consistent structured records.
 
 ---
 
-## API prevista
+<a id="api-prevista--planned-api"></a>
+
+## 🔗 API prevista / Planned API
 
 ### `GET /health`
-Healthcheck da aplicação.
+
+Application health check.
 
 ### `GET /jobs`
-Listagem paginada de vagas com filtros.
+
+Paginated job list with filters.
 
 ### `GET /jobs/{id}`
-Detalhe de uma vaga específica.
+
+Detail of a specific job posting.
 
 ### `GET /stats`
-Agregações principais para o dashboard.
+
+Main aggregations for the dashboard.
 
 ### `GET /skills`
-Lista de skills com contagem agregada.
+
+Skill list with aggregated counts.
 
 ### `GET /pipeline/status`
-Status das execuções de coleta e saúde geral do pipeline.
+
+Collection execution status and general pipeline health.
 
 ---
 
-## Taxonomia inicial de skills
+## 🧠 Taxonomia inicial de skills / Initial skill taxonomy
 
-A primeira versão da taxonomia será pragmática e transparente.
+The first version of the taxonomy is pragmatic and transparent.
 
-### Categorias iniciais
+### Initial categories
+
 - `languages`
 - `frameworks`
 - `data`
 - `cloud_infra`
 - `databases`
 
-### Exemplos de skills
+### Skill examples
+
 - Python
 - SQL
 - JavaScript
@@ -312,28 +534,30 @@ A primeira versão da taxonomia será pragmática e transparente.
 - MongoDB
 - Redis
 
-### Regra geral
-Nada de classificação mágica.  
-A detecção vai começar com dicionário, aliases e regras claras, porque isso é suficiente para a V1 e muito mais fácil de explicar, testar e manter.
+### General rule
+
+No magic classification.
+
+Detection starts with dictionaries, aliases and clear rules because this is enough for V1 and much easier to explain, test and maintain.
 
 ---
 
-## Deduplicação
+## 🧹 Deduplicação / Deduplication
 
-A V1 vai usar uma estratégia simples e defensável:
+V1 uses a simple and defensible strategy:
 
-- normalização básica de título e empresa;
-- fingerprint determinístico;
-- prevenção de duplicatas óbvias;
-- rastreabilidade do dado bruto.
+- basic normalization of title and company;
+- deterministic fingerprint;
+- prevention of obvious duplicates;
+- traceability of raw data.
 
-A prioridade aqui não é resolver deduplicação perfeita. A prioridade é impedir repetição grosseira sem criar uma solução complexa demais cedo demais.
+The priority is not perfect deduplication. The priority is to prevent gross repetition without overengineering the system too early.
 
 ---
 
-## Estrutura do repositório
+## 📁 Estrutura do repositório / Repository structure
 
-```text
+```txt
 jobscope-tech-br/
 ├── frontend/
 │   ├── app/
@@ -377,90 +601,118 @@ jobscope-tech-br/
 
 ---
 
-## Roadmap
+## 🚀 Quick Start / Início rápido
 
-### Fase 0 — Preparação
-- estrutura do repositório;
-- documentação base;
-- issues;
-- milestones;
-- CI mínima;
-- ambiente local.
+### Requisitos locais / Local requirements
 
-### Fase 1 — Base técnica mínima
-- Postgres local;
-- backend inicial;
-- migration inicial;
-- validação de fontes;
-- primeiro coletor;
-- persistência de raw jobs.
-
-### Fase 2 — Pipeline principal
-- parser por fonte;
-- normalização;
-- taxonomia;
-- deduplicação;
-- persistência de jobs.
-
-### Fase 3 — Robustez
-- segunda fonte;
-- testes;
-- ajustes de parser;
-- status do pipeline.
-
-### Fase 4 — API e frontend
-- endpoints mínimos;
-- dashboard;
-- listagem;
-- filtros;
-- detalhe.
-
-### Fase 5 — Publicação
-- deploy;
-- screenshots;
-- vídeo demo;
-- README final;
-- narrativa pública.
-
-### Fase 6 — Iteração pós-lançamento
-- V1.1 enxuta;
-- export CSV;
-- melhoria da taxonomia;
-- filtros mais refinados.
-
----
-
-## Status atual
-
-**Status:** em construção  
-**Fase atual:** preparação do repositório e documentação base  
-**Próximo passo:** criar estrutura inicial, iniciar backend e persistir os primeiros `raw_jobs`
-
----
-
-## Instruções iniciais
-
-### Requisitos locais
 - Python 3.11+
 - Node.js 20+
 - Docker + Docker Compose
 - Git
 
-### Fluxo de inicialização
-1. clonar o repositório;
-2. subir o banco local;
-3. criar o backend inicial;
-4. aplicar migrations;
-5. validar as fontes;
-6. executar o primeiro coletor;
-7. ver os dados brutos persistidos;
-8. evoluir para parsing e normalização.
+### Fluxo inicial recomendado / Recommended initial flow
+
+```bash
+git clone https://github.com/BarujaFe1/jobscope-tech-br.git
+cd jobscope-tech-br
+docker compose up -d
+```
+
+Backend:
+
+```bash
+cd backend
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux/macOS
+source .venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+Frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Planned access:
+
+```txt
+Frontend: http://localhost:3000
+Backend:  http://localhost:8000
+API Docs: http://localhost:8000/docs
+```
 
 ---
 
-## Demo e screenshots
+## 🗺️ Roadmap
 
-A V1 vai precisar de screenshots que provem que o projeto é real:
+### Fase 0 — Preparação
+
+- [ ] Estrutura do repositório.
+- [ ] Documentação base.
+- [ ] Issues e milestones.
+- [ ] CI mínima.
+- [ ] Ambiente local.
+
+### Fase 1 — Base técnica mínima
+
+- [ ] Postgres local.
+- [ ] Backend inicial.
+- [ ] Migration inicial.
+- [ ] Validação de fontes.
+- [ ] Primeiro coletor.
+- [ ] Persistência de raw jobs.
+
+### Fase 2 — Pipeline principal
+
+- [ ] Parser por fonte.
+- [ ] Normalização.
+- [ ] Taxonomia.
+- [ ] Deduplicação.
+- [ ] Persistência de jobs.
+
+### Fase 3 — Robustez
+
+- [ ] Segunda fonte.
+- [ ] Testes.
+- [ ] Ajustes de parser.
+- [ ] Status do pipeline.
+
+### Fase 4 — API e frontend
+
+- [ ] Endpoints mínimos.
+- [ ] Dashboard.
+- [ ] Listagem.
+- [ ] Filtros.
+- [ ] Detalhe.
+
+### Fase 5 — Publicação
+
+- [ ] Deploy.
+- [ ] Screenshots.
+- [ ] Vídeo demo.
+- [ ] README final.
+- [ ] Narrativa pública.
+
+### Fase 6 — Iteração pós-lançamento
+
+- [ ] V1.1 enxuta.
+- [ ] Export CSV.
+- [ ] Melhoria da taxonomia.
+- [ ] Filtros mais refinados.
+
+---
+
+## 📸 Demo e screenshots / Demo and screenshots
+
+A V1 deve incluir screenshots que provem que o produto é real:
 
 - dashboard desktop;
 - dashboard mobile;
@@ -472,35 +724,22 @@ A V1 vai precisar de screenshots que provem que o projeto é real:
 
 ---
 
-## O que este projeto quer provar
+## ⚠️ Riscos conhecidos / Known risks
 
-Este projeto quer provar que eu consigo:
-
-- construir um produto de dados real;
-- trabalhar com dados imperfeitos;
-- desenhar um pipeline simples e sólido;
-- expor dados por API;
-- criar uma experiência web clara;
-- fazer decisões de escopo corretas;
-- publicar algo com cara de trabalho profissional.
-
----
-
-## Riscos conhecidos
-
-- instabilidade das fontes;
-- dados incompletos;
-- ruído na taxonomia;
-- duplicação entre fontes;
-- tentação de inflar o escopo.
+- Instabilidade das fontes.
+- Dados incompletos.
+- Ruído na taxonomia.
+- Duplicação entre fontes.
+- Tentação de inflar o escopo.
 
 A estratégia do projeto é aceitar essas limitações e entregar uma V1 honesta, clara e terminável.
 
 ---
 
-## Stack de valor para portfólio
+## 💼 Valor para portfólio / Portfolio value
 
 Este projeto conversa bem com:
+
 - GitHub;
 - LinkedIn;
 - entrevista técnica;
@@ -509,25 +748,64 @@ Este projeto conversa bem com:
 - currículo;
 - README com screenshots.
 
----
+Ele demonstra união entre:
 
-## Licença
-
-Este projeto será disponibilizado sob licença MIT.
-
----
-
-## Autor
-
-**Seu Nome**  
-GitHub: `[seu-link]`  
-LinkedIn: `[seu-link]`  
-Portfólio: `[seu-link]`
+- estatística aplicada;
+- data engineering;
+- backend/API;
+- analytics;
+- product thinking;
+- UX;
+- documentação técnica.
 
 ---
 
-## Nota final
+## 🤝 Contribuição / Contributing
 
-O JobScope Tech BR não quer parecer maior do que é.
+Contributions are welcome, especially around:
 
-Ele quer parecer **real**: tecnicamente honesto, visualmente claro, documentalmente forte e escopado o suficiente para terminar.
+- data collection reliability;
+- parsing quality;
+- skill taxonomy;
+- deduplication strategy;
+- API design;
+- dashboard UX;
+- documentation.
+
+Recommended flow:
+
+```bash
+git checkout -b feature/your-feature
+git commit -m "feat: describe your change"
+git push origin feature/your-feature
+```
+
+Then open a Pull Request.
+
+---
+
+<a id="autor--author"></a>
+
+## 👤 Autor / Author
+
+Developed by **Felipe Baruja**.
+
+- **Portfolio:** [https://barujafe.vercel.app/](https://barujafe.vercel.app/)
+- **GitHub:** [github.com/BarujaFe1](https://github.com/BarujaFe1)
+- **LinkedIn:** [linkedin.com/in/barujafe](https://www.linkedin.com/in/barujafe/)
+
+---
+
+## 📄 Licença / License
+
+MIT License.
+
+See [LICENSE](./LICENSE) for details.
+
+---
+
+<div align="center">
+  <p><strong>JobScope Tech BR</strong></p>
+  <p>Vagas dispersas entram. Sinais de mercado saem.</p>
+  <p><em>Scattered job posts in. Market signals out.</em></p>
+</div>
