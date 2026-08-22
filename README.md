@@ -4,6 +4,8 @@
   <h1>JobScope Signal Graph</h1>
   <p><strong>Eu estava escolhendo projetos para entrar em Dados. Parei de adivinhar e comecei a medir as vagas.</strong></p>
   <p>Produto de dados que mede quais skills aparecem <em>juntas</em> em vagas reais de Dados/Analytics (boards públicos Greenhouse/Lever) e compara demanda de mercado com evidências verificáveis de portfólio.</p>
+
+  <p><a href="https://jobscope-signal-graph-baruja-fe.vercel.app/"><strong>🚀 Demo ao vivo</strong></a></p>
 </div>
 
 ---
@@ -74,7 +76,13 @@ npm ci && npm run sync:snapshot && npm run dev   # http://localhost:3000
 
 ## Screenshots
 
-> Capturas do build publicado: ver `assets/screenshots/` (atualizadas pós-deploy).
+| Visão geral (579 vagas reais) | Grafo de coocorrência |
+|---|---|
+| ![Overview](./assets/screenshots/01-overview.png) | ![Graph](./assets/screenshots/02-graph.png) |
+| **Portfolio Gap** | **Bundles por role** |
+| ![Gap](./assets/screenshots/03-gap.png) | ![Role](./assets/screenshots/04-role-bundle.png) |
+
+*Capturas do build de produção: [jobscope-signal-graph-baruja-fe.vercel.app](https://jobscope-signal-graph-baruja-fe.vercel.app/)*
 
 ## Autor
 
