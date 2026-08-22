@@ -43,12 +43,12 @@ class PortfolioEvidence(BaseModel):
     skills: dict[str, SkillEvidenceEntry] = Field(default_factory=dict)
 
     @classmethod
-    def from_yaml_text(cls, text: str) -> "PortfolioEvidence":
+    def from_yaml_text(cls, text: str) -> PortfolioEvidence:
         raw = yaml.safe_load(text) or {}
         return cls.model_validate({"skills": raw.get("skills") or {}})
 
     @classmethod
-    def load(cls, path=None) -> "PortfolioEvidence":  # noqa: ANN001
+    def load(cls, path=None) -> PortfolioEvidence:  # noqa: ANN001
         evidence_path = path or DEFAULT_EVIDENCE_PATH
         return cls.from_yaml_text(evidence_path.read_text(encoding="utf-8"))
 

@@ -1,15 +1,15 @@
 """Snapshot aggregation pipeline: derived records -> public aggregate JSON model."""
 
 import hashlib
-from datetime import UTC, datetime
+from datetime import datetime
 
 from app.contracts import NormalizedJob
-from app.services.skills import SkillDictionary
-from app.services.snapshot import build_derived_records
 from app.services.signal_pipeline import (
     SNIPPET_MAX_CHARS,
     build_market_snapshot,
 )
+from app.services.skills import SkillDictionary
+from app.services.snapshot import build_derived_records
 
 
 def _job(source: str, jid: str, company: str, title: str, text: str) -> NormalizedJob:

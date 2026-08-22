@@ -19,16 +19,16 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "apps" / "api"))
 
-from app.adapters.greenhouse import GreenhouseAdapter  # noqa: E402
-from app.adapters.lever import LeverAdapter  # noqa: E402
-from app.contracts import NormalizedJob  # noqa: E402
-from app.domain.types import ParsedJob  # noqa: E402
-from app.pipeline.collectors import load_fixture  # noqa: E402
-from app.services.portfolio_gap import PortfolioEvidence  # noqa: E402
-from app.services.signal_pipeline import build_market_snapshot  # noqa: E402
-from app.services.skills import load_skill_dictionary  # noqa: E402
-from app.services.snapshot import build_derived_records  # noqa: E402
-from app.services.source_registry import load_source_registry  # noqa: E402
+from app.adapters.greenhouse import GreenhouseAdapter
+from app.adapters.lever import LeverAdapter
+from app.contracts import NormalizedJob
+from app.domain.types import ParsedJob
+from app.pipeline.collectors import load_fixture
+from app.services.portfolio_gap import PortfolioEvidence
+from app.services.signal_pipeline import build_market_snapshot
+from app.services.skills import load_skill_dictionary
+from app.services.snapshot import build_derived_records
+from app.services.source_registry import load_source_registry
 
 OUTPUT_PATH = REPO_ROOT / "data" / "public" / "market_snapshot.json"
 

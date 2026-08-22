@@ -12,7 +12,11 @@ from typing import Any
 
 from app.contracts import DerivedJob
 from app.services.graph import BUNDLE_SIZE_DEFAULT, build_role_skill_graph
-from app.services.portfolio_gap import DEMAND_THRESHOLD_DEFAULT, PortfolioEvidence, analyze_portfolio_gap
+from app.services.portfolio_gap import (
+    DEMAND_THRESHOLD_DEFAULT,
+    PortfolioEvidence,
+    analyze_portfolio_gap,
+)
 from app.services.roles import classify_role
 from app.services.skills import SkillDictionary
 
