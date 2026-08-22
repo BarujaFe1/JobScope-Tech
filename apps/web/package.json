@@ -1,12 +1,13 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "jobscope-web",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:snapshot": "node scripts/sync-snapshot.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",
