@@ -8,7 +8,7 @@ from typing import Literal
 import yaml
 from pydantic import BaseModel, Field, model_validator
 
-RepoRoot = Path(__file__).resolve().parents[3]
+RepoRoot = Path(__file__).resolve().parents[4]
 DEFAULT_REGISTRY_PATH = RepoRoot / "data" / "config" / "sources.yml"
 
 

@@ -1,8 +1,47 @@
 # JobScope Signal Graph - source registry
 # Only public Greenhouse/Lever job boards. enabled=false means "do not collect".
-# Provenance documents WHY a board was included.
+# Every entry carries provenance documenting WHY it was included and WHEN validated.
 sources:
-  # --- Synthetic demo (fixture-based, safe for public snapshot) ---
+  # --- Real boards (validated live on 2026-08-22; BR Data/Analytics presence confirmed) ---
+  - company: Grupo QuintoAndar
+    ats: greenhouse
+    board_token: quintoandar
+    country: BR
+    scope: data-analytics
+    enabled: true
+    provenance: probed 2026-08-22 - 90 postings, 9 Data/Analytics roles in Brazil
+  - company: Agi (Banco Agibank)
+    ats: greenhouse
+    board_token: agibank
+    country: BR
+    scope: data-analytics
+    enabled: true
+    provenance: probed 2026-08-22 - 177 postings, 15 Data/Analytics roles in Brazil
+  - company: Airbnb
+    ats: greenhouse
+    board_token: airbnb
+    country: US-BR
+    scope: data-analytics-brazil-offices
+    enabled: true
+    provenance: probed 2026-08-22 - 189 postings, 2 Brazil-based Data roles
+  - company: CI&T
+    ats: lever
+    site: ciandt
+    country: BR
+    scope: data-analytics
+    enabled: true
+    provenance: probed 2026-08-22 - 169 postings, 29 Data/Analytics roles in Brazil
+
+  # --- Reference/validation boards (disabled) ---
+  - company: Duolingo
+    ats: greenhouse
+    board_token: duolingo
+    country: US
+    scope: reference-validation
+    enabled: false
+    provenance: verified reachable 2026-08-22; used to validate adapter contract only
+
+  # --- Synthetic demo (fixture-based, used by tests and synthetic snapshot mode) ---
   - company: ExampleCo
     ats: greenhouse
     board_token: exampleco
@@ -15,12 +54,3 @@ sources:
     country: BR
     enabled: false
     provenance: synthetic example from spec; used by tests
-
-  # --- Real candidates (validate live capture before enabling) ---
-  - company: Duolingo
-    ats: greenhouse
-    board_token: duolingo
-    country: US
-    scope: reference-validation
-    enabled: false
-    provenance: verified reachable 2026-08-22; used to validate adapter contract
