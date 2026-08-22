@@ -69,7 +69,7 @@ def test_bundles_are_top_neighbors_by_support() -> None:
     bundle = result.bundles_for("SQL")
     assert len(bundle) >= 1
     top = bundle[0]
-    neighbor = top.skill_a if top.skill_a == "SQL" else top.skill_b
+    neighbor = top.skill_b if top.skill_a == "SQL" else top.skill_a
     assert neighbor == "Python"
 
 
