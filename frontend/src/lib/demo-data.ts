@@ -1,0 +1,166 @@
+import type { JobDetail, PipelineStatus, Skill, Stats } from "./types";
+
+export const DEMO_STATS: Stats = {
+  total_jobs: 15,
+  unique_companies: 13,
+  top_skills: [
+    { id: 1, name: "Python", category: "languages", slug: "python", count: 6 },
+    { id: 2, name: "PostgreSQL", category: "databases", slug: "postgresql", count: 5 },
+    { id: 3, name: "Docker", category: "cloud_infra", slug: "docker", count: 5 },
+    { id: 4, name: "SQL", category: "languages", slug: "sql", count: 5 },
+    { id: 5, name: "AWS", category: "cloud_infra", slug: "aws", count: 4 },
+    { id: 6, name: "TypeScript", category: "languages", slug: "typescript", count: 3 },
+    { id: 7, name: "React", category: "frameworks", slug: "react", count: 3 },
+    { id: 8, name: "Kubernetes", category: "cloud_infra", slug: "kubernetes", count: 3 },
+  ],
+  seniority_distribution: {
+    senior: 4,
+    mid: 4,
+    junior: 2,
+    lead: 2,
+    intern: 2,
+    unspecified: 1,
+  },
+  work_model_distribution: {
+    hybrid: 6,
+    remote: 5,
+    onsite: 4,
+  },
+  top_locations: {
+    "Remoto / BR": 4,
+    "São Paulo, SP": 2,
+    "Rio de Janeiro, RJ": 2,
+    "Curitiba, PR": 1,
+    "Belo Horizonte, MG": 1,
+  },
+};
+
+export const DEMO_SKILLS: Skill[] = DEMO_STATS.top_skills;
+
+export const DEMO_JOBS: JobDetail[] = [
+  {
+    id: 1,
+    title: "Desenvolvedor(a) Backend Python Pleno",
+    company: "NuvemPay Tecnologia Ltda",
+    seniority: "mid",
+    work_model: "hybrid",
+    location: "São Paulo, SP",
+    source: "fixture_board_a",
+    original_url: "https://example.com/jobs/a-001",
+    skills: ["Python", "FastAPI", "PostgreSQL", "Docker", "AWS", "Redis"],
+    published_at: "2026-06-20T12:00:00",
+    collected_at: "2026-07-13T12:00:00",
+    description:
+      "Buscamos pessoa desenvolvedora Backend Pleno com Python, FastAPI, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+    fingerprint: "demo-fp-1",
+    external_id: "a-001",
+  },
+  {
+    id: 2,
+    title: "Engenheiro(a) de Dados Sênior",
+    company: "Atlas Analytics",
+    seniority: "senior",
+    work_model: "remote",
+    location: "Remoto / BR",
+    source: "fixture_board_a",
+    original_url: "https://example.com/jobs/a-002",
+    skills: ["Python", "Spark", "Airflow", "dbt", "SQL", "AWS"],
+    published_at: "2026-06-18T09:30:00",
+    collected_at: "2026-07-13T12:00:00",
+    description:
+      "Atuar com pipelines de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+    fingerprint: "demo-fp-2",
+    external_id: "a-002",
+  },
+  {
+    id: 3,
+    title: "Frontend Developer Junior — React",
+    company: "ShopBrasil Digital",
+    seniority: "junior",
+    work_model: "onsite",
+    location: "Curitiba, PR",
+    source: "fixture_board_a",
+    original_url: "https://example.com/jobs/a-003",
+    skills: ["React", "TypeScript", "Next.js", "Node.js"],
+    published_at: "2026-06-15T15:00:00",
+    collected_at: "2026-07-13T12:00:00",
+    description:
+      "Vaga júnior para React, TypeScript e Next.js. Contato com Node.js e APIs REST. Presencial em Curitiba.",
+    fingerprint: "demo-fp-3",
+    external_id: "a-003",
+  },
+  {
+    id: 4,
+    title: "Cientista de Dados Pleno",
+    company: "InsightLab",
+    seniority: "mid",
+    work_model: "hybrid",
+    location: "Recife, PE",
+    source: "fixture_board_b",
+    original_url: "https://example.org/vagas/b-102",
+    skills: ["Python", "Pandas", "SQL", "Spark"],
+    published_at: "2026-06-17T13:00:00",
+    collected_at: "2026-07-13T12:00:00",
+    description:
+      "Modelagem preditiva com Python, Pandas e SQL. Experiência com Spark é desejável. Híbrido em Recife.",
+    fingerprint: "demo-fp-4",
+    external_id: "b-102",
+  },
+  {
+    id: 5,
+    title: "Tech Lead Backend",
+    company: "FinServe Cloud ME",
+    seniority: "lead",
+    work_model: "hybrid",
+    location: "Rio de Janeiro",
+    source: "fixture_board_b",
+    original_url: "https://example.org/vagas/b-107",
+    skills: ["Java", "Kubernetes", "Docker", "GCP"],
+    published_at: "2026-06-03T08:45:00",
+    collected_at: "2026-07-13T12:00:00",
+    description:
+      "Liderança técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads. Modelo híbrido.",
+    fingerprint: "demo-fp-5",
+    external_id: "b-107",
+  },
+];
+
+export const DEMO_PIPELINE: PipelineStatus = {
+  healthy: true,
+  sources: [
+    {
+      key: "fixture_board_a",
+      name: "Fixture Board A",
+      description: "Demo source with structured ATS-like fields (seed fixture).",
+    },
+    {
+      key: "fixture_board_b",
+      name: "Fixture Board B",
+      description: "Demo source with noisier free-text fields (seed fixture).",
+    },
+  ],
+  recent_runs: [
+    {
+      id: 2,
+      source: "fixture_board_b",
+      status: "success",
+      started_at: "2026-07-13T12:00:00",
+      finished_at: "2026-07-13T12:00:01",
+      jobs_collected: 8,
+      jobs_created: 7,
+      jobs_skipped: 1,
+      message: "Collected 8; created 7; skipped 1",
+    },
+    {
+      id: 1,
+      source: "fixture_board_a",
+      status: "success",
+      started_at: "2026-07-13T12:00:00",
+      finished_at: "2026-07-13T12:00:01",
+      jobs_collected: 8,
+      jobs_created: 8,
+      jobs_skipped: 0,
+      message: "Collected 8; created 8; skipped 0",
+    },
+  ],
+};

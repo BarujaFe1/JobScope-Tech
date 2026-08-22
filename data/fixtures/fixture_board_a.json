@@ -1,0 +1,90 @@
+[
+  {
+    "id": "a-001",
+    "title": "Desenvolvedor(a) Backend Python Pleno",
+    "company": "NuvemPay Tecnologia Ltda",
+    "location": "São Paulo, SP",
+    "seniority": "pleno",
+    "work_model": "híbrido",
+    "url": "https://example.com/jobs/a-001",
+    "published_at": "2026-06-20T12:00:00Z",
+    "description": "Buscamos pessoa desenvolvedora Backend Pleno com Python, FastAPI, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo."
+  },
+  {
+    "id": "a-002",
+    "title": "Engenheiro(a) de Dados Sênior",
+    "company": "Atlas Analytics",
+    "location": "Remoto",
+    "seniority": "sênior",
+    "work_model": "remoto",
+    "url": "https://example.com/jobs/a-002",
+    "published_at": "2026-06-18T09:30:00Z",
+    "description": "Atuar com pipelines de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil."
+  },
+  {
+    "id": "a-003",
+    "title": "Frontend Developer Junior — React",
+    "company": "ShopBrasil Digital",
+    "location": "Curitiba, PR",
+    "seniority": "júnior",
+    "work_model": "presencial",
+    "url": "https://example.com/jobs/a-003",
+    "published_at": "2026-06-15T15:00:00Z",
+    "description": "Vaga júnior para React, TypeScript e Next.js. Contato com Node.js e APIs REST. Presencial em Curitiba."
+  },
+  {
+    "id": "a-004",
+    "title": "DevOps / SRE Lead",
+    "company": "FinServe Cloud",
+    "location": "Rio de Janeiro, RJ",
+    "seniority": "lead",
+    "work_model": "híbrido",
+    "url": "https://example.com/jobs/a-004",
+    "published_at": "2026-06-12T11:00:00Z",
+    "description": "Liderar práticas DevOps com Kubernetes, Docker, AWS e GCP. Observabilidade e automação. Híbrido no Rio de Janeiro."
+  },
+  {
+    "id": "a-005",
+    "title": "Analista de Dados Pleno",
+    "company": "MercadoClaro",
+    "location": "Belo Horizonte, MG",
+    "seniority": "pleno",
+    "work_model": "híbrido",
+    "url": "https://example.com/jobs/a-005",
+    "published_at": "2026-06-10T08:00:00Z",
+    "description": "Análise com SQL, Python e Pandas. Modelagem em PostgreSQL. Experiência com dbt é um plus."
+  },
+  {
+    "id": "a-006",
+    "title": "Estágio em Desenvolvimento Java",
+    "company": "Banco Horizonte S.A.",
+    "location": "Brasília, DF",
+    "seniority": "estágio",
+    "work_model": "presencial",
+    "url": "https://example.com/jobs/a-006",
+    "published_at": "2026-06-08T14:00:00Z",
+    "description": "Programa de estágio com Java, SQL e fundamentos de APIs. Mentoria e trilhas internas."
+  },
+  {
+    "id": "a-007",
+    "title": "Full Stack Mid-level",
+    "company": "Orbit Softwares",
+    "location": "Remoto / BR",
+    "seniority": "mid",
+    "work_model": "remote",
+    "url": "https://example.com/jobs/a-007",
+    "published_at": "2026-06-05T10:00:00Z",
+    "description": "Stack: TypeScript, React, Node.js, PostgreSQL e Docker. Cultura remota-first."
+  },
+  {
+    "id": "a-008",
+    "title": "Platform Engineer Senior",
+    "company": "DataForge BR",
+    "location": "Florianópolis, SC",
+    "seniority": "senior",
+    "work_model": "hybrid",
+    "url": "https://example.com/jobs/a-008",
+    "published_at": "2026-06-01T16:20:00Z",
+    "description": "Construir plataforma interna com Go, Kubernetes, Docker e PostgreSQL. Experiência com AWS."
+  }
+]
