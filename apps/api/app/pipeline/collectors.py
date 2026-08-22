@@ -8,8 +8,8 @@ from pathlib import Path
 
 from app.domain.types import ParsedJob
 
-# Repo root / data/fixtures relative to backend/
-FIXTURES_DIR = Path(__file__).resolve().parents[3] / "data" / "fixtures"
+# Repo root / data/fixtures relative to apps/api/app/pipeline/
+FIXTURES_DIR = Path(__file__).resolve().parents[4] / "data" / "fixtures"
 
 
 def _parse_iso(value: str | None) -> datetime | None:

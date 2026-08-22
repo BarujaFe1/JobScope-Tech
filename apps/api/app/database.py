@@ -21,7 +21,7 @@ def _ensure_sqlite_parent(url: str) -> None:
         return
     path = Path(raw_path)
     if not path.is_absolute():
-        # Resolve relative to backend/ working directory
+        # Resolve relative to apps/api/ working directory
         path = Path.cwd() / path
     path.parent.mkdir(parents=True, exist_ok=True)
 
