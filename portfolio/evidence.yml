@@ -1,0 +1,25 @@
+# Portfolio evidence - manually curated, auditable.
+# G7 contract: ONLY skills registered here receive evidence credit in the
+# gap analysis. Levels: learning | working | strong. No self-praise; the
+# reason must point at verifiable artifacts (repos/links).
+skills:
+  SQL:
+    level: working
+    evidence:
+      - repo: BarujaFe1/JobScope-Tech
+        reason: SQL-heavy data pipeline and DuckDB/SQLite aggregations in this project
+  Python:
+    level: strong
+    evidence:
+      - repo: BarujaFe1/JobScope-Tech
+        reason: FastAPI services, adapters, tests and CI authored end-to-end
+  Data Visualization:
+    level: working
+    evidence:
+      - repo: BarujaFe1/JobScope-Tech
+        reason: Next.js dashboard rendering market aggregates with honest states
+  Experimentation:
+    level: learning
+    evidence:
+      - link: https://github.com/BarujaFe1
+        reason: coursework + applied reading; no production experiment ownership yet

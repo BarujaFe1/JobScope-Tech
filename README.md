@@ -1,142 +1,85 @@
 <div align="center">
-  <img src="./icon.png" alt="JobScope Tech BR Logo" width="120" height="120" />
+  <img src="./assets/icon.png" alt="JobScope Signal Graph" width="112" height="112" />
 
-  <h1>JobScope Tech BR</h1>
-
-  <p><strong>Produto de dados sobre o mercado de vagas tech no Brasil (spec V1 — docs).</strong></p>
-  <p><strong>Data product for the Brazilian tech job market (V1 spec — docs).</strong></p>
-
-  <p>
-    <a href="#pt-br">PT-BR</a>
-     · 
-    <a href="#english">English</a>
-     · 
-    <a href="#stack">Stack</a>
-     · 
-    <a href="#architecture">Architecture</a>
-     · 
-    <a href="#quick-start">Quick Start</a>
-     · 
-    <a href="#author">Author</a>
-  </p>
-
-  <p>
-    <img alt="Status-Spec%20%2F%20docs" src="https://img.shields.io/badge/Status-Spec%20%2F%20docs-0f766e?style=for-the-badge" />
-    <img alt="Planned-Next.js" src="https://img.shields.io/badge/Planned-Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-    <img alt="Planned-FastAPI" src="https://img.shields.io/badge/Planned-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-    <img alt="License-MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
-  </p>
-
-  <p>
-    <a href="https://github.com/BarujaFe1/JobScope-Tech"><strong>Repo</strong></a>
-     · 
-    <a href="https://barujafe.vercel.app/"><strong>Portfolio</strong></a>
-     · 
-    <a href="https://www.linkedin.com/in/barujafe/"><strong>LinkedIn</strong></a>
-  </p>
+  <h1>JobScope Signal Graph</h1>
+  <p><strong>Eu estava escolhendo projetos para entrar em Dados. Parei de adivinhar e comecei a medir as vagas.</strong></p>
+  <p>Produto de dados que mede quais skills aparecem <em>juntas</em> em vagas reais de Dados/Analytics (boards públicos Greenhouse/Lever) e compara demanda de mercado com evidências verificáveis de portfólio.</p>
 </div>
 
-
-> **Honest status:** this repository snapshot contains **README + LICENSE + icon only** (no application source). Content below reflects the **documented V1 product spec**, not shipped code in this clone.
-
 ---
 
-## PT-BR
+## O problema
 
-### Visão geral
-O **JobScope Tech BR** é a especificação de um produto de dados para comparar e ler o mercado de vagas tech no Brasil: dashboard, lista, detalhe e pipeline — com stack alvo Next.js + FastAPI + PostgreSQL.
+Escolher o que estudar (ou contratar) em Dados é chute: títulos inconsistentes, skills misturadas a marketing, senioridades sem padrão. Um "dashboard de vagas" comum conta frequências isoladas — mas **o que define um stack real é o que aparece junto**.
 
-### Problema
-Comparar vagas é difícil, dados são pouco estruturados e a leitura de mercado fica lenta/anedótica.
+## Por que não é trivial
 
-### Para quem
-Candidatos e analistas que querem um **recorte estruturado** do mercado tech BR (quando o produto for implementado).
+- **Coexistência ≠ correlação óbvia**: precisa de grafo de coocorrência com gate de suporte mínimo para não desenhar arestas por ruído;
+- **Evidência ou não aconteceu**: cada skill detectada carrega o *span* do texto original + link da vaga — nada de número sem prova;
+- **Dedup entre ATS**: mesma vaga publicada em boards diferentes colapsa por hash canônico do texto;
+- **Gap honesto**: o comparativo portfólio-vs-mercado só usa evidências manualmente registradas (`portfolio/evidence.yml`) — o sistema não elogia nem inventa.
 
-### Funcionalidades (V1 planejada / documentada)
-- Dashboard de mercado
-- Lista e detalhe de vagas
-- Pipeline de dados (planejado)
-- Escopo V1 enxuta com exclusões explícitas no README de produto
+## Arquitetura
 
-### Escopo e limites (honestos)
-- **Docs-only** no Git atual — sem `package.json` / API no clone
-- Não scraping ilegal; fontes e compliance devem ser definidos na implementação
-- Sem demo pública no homepage
+```txt
+data/config/sources.yml ──→ apps/api (FastAPI · httpx · Pydantic)
+                              ├ adapters/greenhouse.py  GET /v1/boards/{token}/jobs?content=true
+                              ├ adapters/lever.py       GET /v0/postings/{site}?mode=json
+                              ├ services/ snapshot → skills → roles → graph → gap
+scripts/build_snapshot.py ──→ data/public/market_snapshot.json (agregados + snippets ≤200 chars)
+apps/web (Next.js 15)     ──→ lê o snapshot commitado: overview · grafo · bundles · gap
+```
 
----
+Detalhes: [`docs/METHODOLOGY.md`](./docs/METHODOLOGY.md) · [`docs/SOURCES_AND_COMPLIANCE.md`](./docs/SOURCES_AND_COMPLIANCE.md)
 
-## English
+## Quickstart
 
-### Overview
-**JobScope Tech BR** is the spec for a data product to compare and read Brazil’s tech job market: dashboard, list, detail and pipeline — targeting Next.js + FastAPI + PostgreSQL.
+```bash
+# API + testes (Python 3.12+)
+cd apps/api
+python -m venv .venv && .venv\Scripts\activate   # Linux: source .venv/bin/activate
+pip install -e ".[dev]"
+pytest -q                                        # 69 testes, incluindo os 7 golden scenarios
 
-### Problem
-Job comparison is hard, data is poorly structured and market reading stays slow/anecdotal.
+# Snapshot sintético (determinístico) ou real (boards habilitados):
+python ../../scripts/build_snapshot.py --mode synthetic
+python ../../scripts/build_snapshot.py --mode live
 
-### Who it is for
-Candidates and analysts who want a **structured slice** of the BR tech market (once implemented).
+# Web
+cd ../web
+npm ci && npm run sync:snapshot && npm run dev   # http://localhost:3000
+```
 
-### Features (planned V1 / documented)
-- Market dashboard
-- Job list and detail
-- Data pipeline (planned)
-- Lean V1 scope with explicit non-goals in the product README
+## Momento principal (≤3 cliques)
 
-### Scope and honest limits
-- **Docs-only** in current Git — no app source in this clone
-- No illegal scraping; sources/compliance must be defined at implementation time
-- No public homepage demo
+1. abrir **Visão geral** → amostra, fontes e top skills com disclaimers;
+2. clicar **Grafo** → pares SQL×Python etc. com suporte/Jaccard (arestas fracas *não existem*);
+3. clicar **Portfolio Gap** → demanda vs evidências auditáveis, status factual por skill.
 
----
+## Limitações honestas
 
-## Stack
+- amostra = apenas boards Greenhouse/Lever habilitados (**Gupy está fora de escopo**) — não é retrato do mercado BR completo;
+- extração por dicionário versionado: recall limitado, zero magia, zero LLM nesta versão;
+- snapshot é corte temporal; séries históricas exigem capturas recorrentes.
 
-| Layer | Technology (planned) |
+## Qualidade (factual, sem overclaim)
+
+| Check | Estado |
 |---|---|
-| Web | Next.js |
-| API | FastAPI |
-| DB | PostgreSQL |
-| Repo today | README + LICENSE + icon |
+| Testes automatizados | 69 passing (unit + integração + 7 golden scenarios G1–G7) |
+| Lint Python | ruff clean |
+| Web lint + build | ESLint clean, Next build OK |
+| CI | GitHub Actions: ruff+pytest / eslint+build |
+| Secret/PII scan | script dedicado no CI |
 
----
+## Screenshots
 
-## Architecture
+> Capturas do build publicado: ver `assets/screenshots/` (atualizadas pós-deploy).
 
-Planned: ingest/normalize → store → dashboard/list/detail API → Next.js UI. See README history sections for V1 inclusions/exclusions.
+## Autor
 
----
+**Felipe Baruja** — [portfólio](https://barujafe.vercel.app/) · [GitHub](https://github.com/BarujaFe1) · [LinkedIn](https://www.linkedin.com/in/barujafe/)
 
-## Quick Start
+## Licença
 
-No runnable application is present in this repository snapshot. Use this README as the product brief until source is published.
-
----
-
-## Technical decisions
-
-- Keep **V1 lean** (documented non-goals matter)
-- Prefer structured comparison over endless job-board scraping narratives
-- Separate **spec repo honesty** from marketing screenshots of unshipped code
-
----
-
-## Roadmap
-
-- Publish initial app scaffold matching the V1 spec
-- Define allowed data sources and refresh policy
-- Add a lab demo with synthetic jobs first
-
----
-
-## Author
-
-**Felipe Alirio Baruja** — data / product / full-stack portfolio.
-
-- Portfolio: [https://barujafe.vercel.app/](https://barujafe.vercel.app/)
-- GitHub: [https://github.com/BarujaFe1](https://github.com/BarujaFe1)
-- LinkedIn: [https://www.linkedin.com/in/barujafe/](https://www.linkedin.com/in/barujafe/)
-
-
-## License
-
-MIT — see [`LICENSE`](./LICENSE).
+MIT — ver [`LICENSE`](./LICENSE).

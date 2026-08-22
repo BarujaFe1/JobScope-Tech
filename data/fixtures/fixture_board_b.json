@@ -1,0 +1,90 @@
+[
+  {
+    "id": "b-101",
+    "external_code": "b-101",
+    "job_title": "Pessoa Desenvolvedora Python Sr.",
+    "employer": "NuvemPay Tecnologia",
+    "city": "São Paulo - SP",
+    "link": "https://example.org/vagas/b-101",
+    "posted_at": "2026-06-21T10:00:00Z",
+    "body": "Vaga sênior para atuar com Python, FastAPI e PostgreSQL. Diferenciais: Redis, Docker e AWS.",
+    "meta": "Modalidade: remoto. Time de pagamentos."
+  },
+  {
+    "id": "b-102",
+    "external_code": "b-102",
+    "job_title": "Cientista de Dados Pleno",
+    "employer": "InsightLab",
+    "city": "Recife, PE",
+    "link": "https://example.org/vagas/b-102",
+    "posted_at": "2026-06-17T13:00:00Z",
+    "body": "Modelagem preditiva com Python, Pandas e SQL. Experiência com Spark é desejável.",
+    "meta": "Híbrido em Recife."
+  },
+  {
+    "id": "b-103",
+    "external_code": "b-103",
+    "job_title": "React Native / Frontend Junior",
+    "employer": "AppLeste",
+    "city": "Salvador, BA",
+    "link": "https://example.org/vagas/b-103",
+    "posted_at": "2026-06-14T09:00:00Z",
+    "body": "Buscamos júnior com JavaScript, TypeScript e React. Contato com Next.js no web.",
+    "meta": "Presencial em Salvador."
+  },
+  {
+    "id": "b-104",
+    "external_code": "b-104",
+    "job_title": "Engenharia de Dados — Airflow e dbt",
+    "employer": "Atlas Analytics Ltda",
+    "city": "Remoto",
+    "link": "https://example.org/vagas/b-104",
+    "posted_at": "2026-06-11T18:00:00Z",
+    "body": "Pipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.",
+    "meta": "Senioridade: sênior."
+  },
+  {
+    "id": "b-105",
+    "external_code": "b-105",
+    "job_title": "Backend Go Mid-level",
+    "employer": "LogiStack",
+    "city": "Campinas, SP",
+    "link": "https://example.org/vagas/b-105",
+    "posted_at": "2026-06-09T12:30:00Z",
+    "body": "APIs em Go (Golang), PostgreSQL e Redis. Docker no dia a dia.",
+    "meta": "Híbrido."
+  },
+  {
+    "id": "b-106",
+    "external_code": "b-106",
+    "job_title": "Estagiário(a) QA / Automação",
+    "employer": "QualityNest",
+    "city": "Porto Alegre, RS",
+    "link": "https://example.org/vagas/b-106",
+    "posted_at": "2026-06-07T11:00:00Z",
+    "body": "Estágio com foco em testes e fundamentos de JavaScript e SQL.",
+    "meta": "Presencial."
+  },
+  {
+    "id": "b-107",
+    "external_code": "b-107",
+    "job_title": "Tech Lead Backend",
+    "employer": "FinServe Cloud ME",
+    "city": "Rio de Janeiro",
+    "link": "https://example.org/vagas/b-107",
+    "posted_at": "2026-06-03T08:45:00Z",
+    "body": "Liderança técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads.",
+    "meta": "Modelo híbrido."
+  },
+  {
+    "id": "b-108",
+    "external_code": "b-108",
+    "job_title": "Desenvolvedor(a) Backend Python Pleno",
+    "employer": "NuvemPay Tecnologia Ltda",
+    "city": "São Paulo, SP",
+    "link": "https://example.org/vagas/b-108",
+    "posted_at": "2026-06-20T12:30:00Z",
+    "body": "Mesma vaga republicada em outro board: Python, FastAPI, PostgreSQL, Docker, AWS, Redis.",
+    "meta": "Híbrido SP — deve deduplicar com board A."
+  }
+]
