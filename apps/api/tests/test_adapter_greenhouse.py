@@ -38,7 +38,7 @@ def test_g1_greenhouse_fixture_normalizes_stable() -> None:
     # deterministic capture from payload updated_at, converted to UTC
     assert job.captured_at.isoformat() == "2026-08-20T13:00:00+00:00"
     expected_hash = hashlib.sha256(
-        "Build and maintain dbt models. Strong SQL and Python required.".encode()
+        b"Build and maintain dbt models. Strong SQL and Python required."
     ).hexdigest()
     assert job.text_hash == expected_hash
     assert "<" not in job.description_text

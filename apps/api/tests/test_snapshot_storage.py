@@ -1,6 +1,6 @@
 """G3 golden scenario: duplicate jobs in the same snapshot are collapsed."""
 
-from datetime import UTC, datetime
+from datetime import datetime
 
 from app.contracts import NormalizedJob
 from app.services.snapshot import build_derived_records

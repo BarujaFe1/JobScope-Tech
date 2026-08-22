@@ -19,7 +19,7 @@ skills:
 
 
 def _dict_from(yml_text: str) -> SkillDictionary:
-    raw = yaml.safe_load(yml_text)
+    yaml.safe_load(yml_text)
     path = Path(__file__).parent / "_tmp_skills_test.yml"
     path.write_text(yml_text, encoding="utf-8")
     try:
