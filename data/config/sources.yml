@@ -1,0 +1,26 @@
+# JobScope Signal Graph - source registry
+# Only public Greenhouse/Lever job boards. enabled=false means "do not collect".
+# Provenance documents WHY a board was included.
+sources:
+  # --- Synthetic demo (fixture-based, safe for public snapshot) ---
+  - company: ExampleCo
+    ats: greenhouse
+    board_token: exampleco
+    country: BR
+    enabled: false
+    provenance: synthetic example from spec; used by tests
+  - company: ExampleLabs
+    ats: lever
+    site: examplelabs
+    country: BR
+    enabled: false
+    provenance: synthetic example from spec; used by tests
+
+  # --- Real candidates (validate live capture before enabling) ---
+  - company: Duolingo
+    ats: greenhouse
+    board_token: duolingo
+    country: US
+    scope: reference-validation
+    enabled: false
+    provenance: verified reachable 2026-08-22; used to validate adapter contract

@@ -1,0 +1,1242 @@
+{
+  "meta": {
+    "generated_at": "2026-08-22T18:50:11+00:00",
+    "methodology_version": "1.0.0",
+    "skills_dictionary_version": "2026-08-22-draft-1",
+    "sample_size": 16,
+    "sources": [
+      {
+        "company": "synthetic-greenhouse",
+        "ats": "greenhouse",
+        "jobs_captured": 8
+      },
+      {
+        "company": "synthetic-lever",
+        "ats": "lever",
+        "jobs_captured": 8
+      }
+    ],
+    "demand_threshold": 5,
+    "min_support": 2,
+    "disclaimer": "Amostra composta apenas pelos boards habilitados em data/config/sources.yml; não representa todo o mercado brasileiro. Skills extraídas por dicionário versionado com evidência textual e link para a vaga original.",
+    "dedup": {
+      "total_input": 16,
+      "same_key_collapsed": 0,
+      "cross_source_hash_collapsed": 0
+    },
+    "mode": "synthetic"
+  },
+  "roles": [
+    {
+      "role": "other",
+      "jobs": 13
+    },
+    {
+      "role": "data_analyst",
+      "jobs": 1
+    },
+    {
+      "role": "data_scientist",
+      "jobs": 1
+    },
+    {
+      "role": "data_engineer",
+      "jobs": 1
+    }
+  ],
+  "skill_frequencies": {
+    "_all": {
+      "AWS": 7,
+      "Docker": 8,
+      "PostgreSQL": 7,
+      "Python": 6,
+      "Redis": 4,
+      "dbt": 3,
+      "SQL": 6,
+      "Spark": 3,
+      "Airflow": 2,
+      "JavaScript": 4,
+      "TypeScript": 3,
+      "GCP": 2,
+      "Kubernetes": 3,
+      "Pandas": 2,
+      "Java": 2,
+      "Go": 2
+    },
+    "other": {
+      "AWS": 6,
+      "Docker": 8,
+      "PostgreSQL": 6,
+      "Python": 4,
+      "Redis": 4,
+      "dbt": 1,
+      "SQL": 3,
+      "Spark": 1,
+      "Airflow": 1,
+      "JavaScript": 4,
+      "TypeScript": 3,
+      "GCP": 2,
+      "Kubernetes": 3,
+      "Java": 2,
+      "Go": 2
+    },
+    "data_analyst": {
+      "dbt": 1,
+      "SQL": 1,
+      "PostgreSQL": 1,
+      "Python": 1,
+      "Pandas": 1
+    },
+    "data_scientist": {
+      "Python": 1,
+      "Pandas": 1,
+      "SQL": 1,
+      "Spark": 1
+    },
+    "data_engineer": {
+      "dbt": 1,
+      "SQL": 1,
+      "AWS": 1,
+      "Spark": 1,
+      "Airflow": 1
+    }
+  },
+  "graphs": {
+    "_all": {
+      "min_support": 2,
+      "nodes": [
+        {
+          "skill": "Docker",
+          "frequency": 8
+        },
+        {
+          "skill": "AWS",
+          "frequency": 7
+        },
+        {
+          "skill": "PostgreSQL",
+          "frequency": 7
+        },
+        {
+          "skill": "Python",
+          "frequency": 6
+        },
+        {
+          "skill": "SQL",
+          "frequency": 6
+        },
+        {
+          "skill": "JavaScript",
+          "frequency": 4
+        },
+        {
+          "skill": "Redis",
+          "frequency": 4
+        },
+        {
+          "skill": "Kubernetes",
+          "frequency": 3
+        },
+        {
+          "skill": "Spark",
+          "frequency": 3
+        },
+        {
+          "skill": "TypeScript",
+          "frequency": 3
+        },
+        {
+          "skill": "dbt",
+          "frequency": 3
+        },
+        {
+          "skill": "Airflow",
+          "frequency": 2
+        },
+        {
+          "skill": "GCP",
+          "frequency": 2
+        },
+        {
+          "skill": "Go",
+          "frequency": 2
+        },
+        {
+          "skill": "Java",
+          "frequency": 2
+        },
+        {
+          "skill": "Pandas",
+          "frequency": 2
+        }
+      ],
+      "edges": [
+        {
+          "skill_a": "Docker",
+          "skill_b": "PostgreSQL",
+          "support": 6,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "Docker",
+          "skill_b": "AWS",
+          "support": 5,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "PostgreSQL",
+          "skill_b": "AWS",
+          "support": 4,
+          "jaccard": 0.4
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "AWS",
+          "support": 4,
+          "jaccard": 0.4444444444444444
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "PostgreSQL",
+          "support": 4,
+          "jaccard": 0.4444444444444444
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "Docker",
+          "support": 4,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "PostgreSQL",
+          "support": 4,
+          "jaccard": 0.5714285714285714
+        },
+        {
+          "skill_a": "JavaScript",
+          "skill_b": "TypeScript",
+          "support": 3,
+          "jaccard": 0.75
+        },
+        {
+          "skill_a": "Kubernetes",
+          "skill_b": "Docker",
+          "support": 3,
+          "jaccard": 0.375
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Docker",
+          "support": 3,
+          "jaccard": 0.2727272727272727
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Redis",
+          "support": 3,
+          "jaccard": 0.42857142857142855
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "SQL",
+          "support": 3,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "AWS",
+          "support": 3,
+          "jaccard": 0.375
+        },
+        {
+          "skill_a": "Spark",
+          "skill_b": "SQL",
+          "support": 3,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "dbt",
+          "skill_b": "SQL",
+          "support": 3,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "Airflow",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.2857142857142857
+        },
+        {
+          "skill_a": "GCP",
+          "skill_b": "Docker",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "GCP",
+          "skill_b": "Kubernetes",
+          "support": 2,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "Go",
+          "skill_b": "Docker",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "Go",
+          "skill_b": "PostgreSQL",
+          "support": 2,
+          "jaccard": 0.2857142857142857
+        },
+        {
+          "skill_a": "Kubernetes",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "Pandas",
+          "skill_b": "SQL",
+          "support": 2,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Pandas",
+          "support": 2,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Spark",
+          "support": 2,
+          "jaccard": 0.2857142857142857
+        },
+        {
+          "skill_a": "SQL",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.18181818181818182
+        },
+        {
+          "skill_a": "SQL",
+          "skill_b": "Airflow",
+          "support": 2,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Spark",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "Spark",
+          "skill_b": "Airflow",
+          "support": 2,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "dbt",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "dbt",
+          "skill_b": "Airflow",
+          "support": 2,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "dbt",
+          "skill_b": "Python",
+          "support": 2,
+          "jaccard": 0.2857142857142857
+        },
+        {
+          "skill_a": "dbt",
+          "skill_b": "Spark",
+          "support": 2,
+          "jaccard": 0.5
+        }
+      ],
+      "bundles": {
+        "Docker": [
+          "PostgreSQL",
+          "AWS",
+          "Redis",
+          "Python",
+          "Kubernetes"
+        ],
+        "AWS": [
+          "Docker",
+          "PostgreSQL",
+          "Python",
+          "Redis",
+          "SQL"
+        ],
+        "PostgreSQL": [
+          "Docker",
+          "AWS",
+          "Python",
+          "Redis",
+          "Go"
+        ],
+        "Python": [
+          "AWS",
+          "PostgreSQL",
+          "Docker",
+          "SQL",
+          "Redis"
+        ],
+        "SQL": [
+          "Python",
+          "Spark",
+          "dbt",
+          "AWS",
+          "Pandas"
+        ],
+        "JavaScript": [
+          "TypeScript"
+        ],
+        "Redis": [
+          "Docker",
+          "PostgreSQL",
+          "AWS",
+          "Python"
+        ],
+        "Kubernetes": [
+          "Docker",
+          "AWS",
+          "GCP"
+        ],
+        "Spark": [
+          "SQL",
+          "AWS",
+          "Python",
+          "dbt",
+          "Airflow"
+        ],
+        "TypeScript": [
+          "JavaScript"
+        ],
+        "dbt": [
+          "SQL",
+          "AWS",
+          "Python",
+          "Spark",
+          "Airflow"
+        ],
+        "Airflow": [
+          "AWS",
+          "SQL",
+          "Spark",
+          "dbt"
+        ],
+        "GCP": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "Go": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "Pandas": [
+          "SQL",
+          "Python"
+        ]
+      }
+    },
+    "other": {
+      "min_support": 2,
+      "nodes": [
+        {
+          "skill": "Docker",
+          "frequency": 8
+        },
+        {
+          "skill": "AWS",
+          "frequency": 6
+        },
+        {
+          "skill": "PostgreSQL",
+          "frequency": 6
+        },
+        {
+          "skill": "JavaScript",
+          "frequency": 4
+        },
+        {
+          "skill": "Python",
+          "frequency": 4
+        },
+        {
+          "skill": "Redis",
+          "frequency": 4
+        },
+        {
+          "skill": "Kubernetes",
+          "frequency": 3
+        },
+        {
+          "skill": "SQL",
+          "frequency": 3
+        },
+        {
+          "skill": "TypeScript",
+          "frequency": 3
+        },
+        {
+          "skill": "GCP",
+          "frequency": 2
+        },
+        {
+          "skill": "Go",
+          "frequency": 2
+        },
+        {
+          "skill": "Java",
+          "frequency": 2
+        },
+        {
+          "skill": "Airflow",
+          "frequency": 1
+        },
+        {
+          "skill": "Spark",
+          "frequency": 1
+        },
+        {
+          "skill": "dbt",
+          "frequency": 1
+        }
+      ],
+      "edges": [
+        {
+          "skill_a": "Docker",
+          "skill_b": "PostgreSQL",
+          "support": 6,
+          "jaccard": 0.75
+        },
+        {
+          "skill_a": "Docker",
+          "skill_b": "AWS",
+          "support": 5,
+          "jaccard": 0.5555555555555556
+        },
+        {
+          "skill_a": "PostgreSQL",
+          "skill_b": "AWS",
+          "support": 4,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "AWS",
+          "support": 4,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "Docker",
+          "support": 4,
+          "jaccard": 0.5
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "PostgreSQL",
+          "support": 4,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "JavaScript",
+          "skill_b": "TypeScript",
+          "support": 3,
+          "jaccard": 0.75
+        },
+        {
+          "skill_a": "Kubernetes",
+          "skill_b": "Docker",
+          "support": 3,
+          "jaccard": 0.375
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Docker",
+          "support": 3,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "PostgreSQL",
+          "support": 3,
+          "jaccard": 0.42857142857142855
+        },
+        {
+          "skill_a": "Python",
+          "skill_b": "Redis",
+          "support": 3,
+          "jaccard": 0.6
+        },
+        {
+          "skill_a": "Redis",
+          "skill_b": "AWS",
+          "support": 3,
+          "jaccard": 0.42857142857142855
+        },
+        {
+          "skill_a": "GCP",
+          "skill_b": "Docker",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "GCP",
+          "skill_b": "Kubernetes",
+          "support": 2,
+          "jaccard": 0.6666666666666666
+        },
+        {
+          "skill_a": "Go",
+          "skill_b": "Docker",
+          "support": 2,
+          "jaccard": 0.25
+        },
+        {
+          "skill_a": "Go",
+          "skill_b": "PostgreSQL",
+          "support": 2,
+          "jaccard": 0.3333333333333333
+        },
+        {
+          "skill_a": "Kubernetes",
+          "skill_b": "AWS",
+          "support": 2,
+          "jaccard": 0.2857142857142857
+        }
+      ],
+      "bundles": {
+        "Docker": [
+          "PostgreSQL",
+          "AWS",
+          "Redis",
+          "Python",
+          "Kubernetes"
+        ],
+        "AWS": [
+          "Docker",
+          "PostgreSQL",
+          "Python",
+          "Redis",
+          "Kubernetes"
+        ],
+        "PostgreSQL": [
+          "Docker",
+          "AWS",
+          "Redis",
+          "Python",
+          "Go"
+        ],
+        "JavaScript": [
+          "TypeScript"
+        ],
+        "Python": [
+          "AWS",
+          "Docker",
+          "PostgreSQL",
+          "Redis"
+        ],
+        "Redis": [
+          "Docker",
+          "PostgreSQL",
+          "AWS",
+          "Python"
+        ],
+        "Kubernetes": [
+          "Docker",
+          "AWS",
+          "GCP"
+        ],
+        "TypeScript": [
+          "JavaScript"
+        ],
+        "GCP": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "Go": [
+          "Docker",
+          "PostgreSQL"
+        ]
+      }
+    },
+    "data_analyst": {
+      "min_support": 2,
+      "nodes": [
+        {
+          "skill": "Pandas",
+          "frequency": 1
+        },
+        {
+          "skill": "PostgreSQL",
+          "frequency": 1
+        },
+        {
+          "skill": "Python",
+          "frequency": 1
+        },
+        {
+          "skill": "SQL",
+          "frequency": 1
+        },
+        {
+          "skill": "dbt",
+          "frequency": 1
+        }
+      ],
+      "edges": [],
+      "bundles": {}
+    },
+    "data_scientist": {
+      "min_support": 2,
+      "nodes": [
+        {
+          "skill": "Pandas",
+          "frequency": 1
+        },
+        {
+          "skill": "Python",
+          "frequency": 1
+        },
+        {
+          "skill": "SQL",
+          "frequency": 1
+        },
+        {
+          "skill": "Spark",
+          "frequency": 1
+        }
+      ],
+      "edges": [],
+      "bundles": {}
+    },
+    "data_engineer": {
+      "min_support": 2,
+      "nodes": [
+        {
+          "skill": "AWS",
+          "frequency": 1
+        },
+        {
+          "skill": "Airflow",
+          "frequency": 1
+        },
+        {
+          "skill": "SQL",
+          "frequency": 1
+        },
+        {
+          "skill": "Spark",
+          "frequency": 1
+        },
+        {
+          "skill": "dbt",
+          "frequency": 1
+        }
+      ],
+      "edges": [],
+      "bundles": {}
+    }
+  },
+  "evidence_examples": [
+    {
+      "skill": "AWS",
+      "snippet": "…I, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+      "source_url": "https://example.com/jobs/a-001",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…Pleno com Python, FastAPI, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+      "source_url": "https://example.com/jobs/a-001",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "…dora Backend Pleno com Python, FastAPI, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+      "source_url": "https://example.com/jobs/a-001",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Python",
+      "snippet": "…pessoa desenvolvedora Backend Pleno com Python, FastAPI, PostgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+      "source_url": "https://example.com/jobs/a-001",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Redis",
+      "snippet": "…tgreSQL e Docker. Experiência com AWS e Redis é diferencial. Trabalho híbrido em São Paulo.",
+      "source_url": "https://example.com/jobs/a-001",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Airflow",
+      "snippet": "…om pipelines de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "…n, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "dbt",
+      "snippet": "…es de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Python",
+      "snippet": "Atuar com pipelines de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Spark",
+      "snippet": "Atuar com pipelines de dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "…dados em Python, Spark, Airflow e dbt. SQL avançado e AWS obrigatórios. Vaga 100% remota para o Brasil.",
+      "source_url": "https://example.com/jobs/a-002",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "JavaScript",
+      "snippet": "Vaga júnior para React, TypeScript e Next.js. Contato com Node.js e APIs REST. Presencial em Curitiba.",
+      "source_url": "https://example.com/jobs/a-003",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "TypeScript",
+      "snippet": "Vaga júnior para React, TypeScript e Next.js. Contato com Node.js e APIs REST. Presencial em Curitiba.",
+      "source_url": "https://example.com/jobs/a-003",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "…práticas DevOps com Kubernetes, Docker, AWS e GCP. Observabilidade e automação. Híbrido no Rio de Janeiro.",
+      "source_url": "https://example.com/jobs/a-004",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "Liderar práticas DevOps com Kubernetes, Docker, AWS e GCP. Observabilidade e automação. Híbrido no Rio de Janeiro.",
+      "source_url": "https://example.com/jobs/a-004",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "GCP",
+      "snippet": "…as DevOps com Kubernetes, Docker, AWS e GCP. Observabilidade e automação. Híbrido no Rio de Janeiro.",
+      "source_url": "https://example.com/jobs/a-004",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Kubernetes",
+      "snippet": "Liderar práticas DevOps com Kubernetes, Docker, AWS e GCP. Observabilidade e automação. Híbrido no Rio de Janeiro.",
+      "source_url": "https://example.com/jobs/a-004",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "dbt",
+      "snippet": "…odelagem em PostgreSQL. Experiência com dbt é um plus.",
+      "source_url": "https://example.com/jobs/a-005",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Pandas",
+      "snippet": "Análise com SQL, Python e Pandas. Modelagem em PostgreSQL. Experiência com dbt é um plus.",
+      "source_url": "https://example.com/jobs/a-005",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "…com SQL, Python e Pandas. Modelagem em PostgreSQL. Experiência com dbt é um plus.",
+      "source_url": "https://example.com/jobs/a-005",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Python",
+      "snippet": "Análise com SQL, Python e Pandas. Modelagem em PostgreSQL. Experiência com dbt é um plus.",
+      "source_url": "https://example.com/jobs/a-005",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "Análise com SQL, Python e Pandas. Modelagem em PostgreSQL. Experiência com dbt é um plus.",
+      "source_url": "https://example.com/jobs/a-005",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Java",
+      "snippet": "Programa de estágio com Java, SQL e fundamentos de APIs. Mentoria e trilhas internas.",
+      "source_url": "https://example.com/jobs/a-006",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "Programa de estágio com Java, SQL e fundamentos de APIs. Mentoria e trilhas internas.",
+      "source_url": "https://example.com/jobs/a-006",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…ypeScript, React, Node.js, PostgreSQL e Docker. Cultura remota-first.",
+      "source_url": "https://example.com/jobs/a-007",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "JavaScript",
+      "snippet": "Stack: TypeScript, React, Node.js, PostgreSQL e Docker. Cultura remota-first.",
+      "source_url": "https://example.com/jobs/a-007",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "Stack: TypeScript, React, Node.js, PostgreSQL e Docker. Cultura remota-first.",
+      "source_url": "https://example.com/jobs/a-007",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "TypeScript",
+      "snippet": "Stack: TypeScript, React, Node.js, PostgreSQL e Docker. Cultura remota-first.",
+      "source_url": "https://example.com/jobs/a-007",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "…s, Docker e PostgreSQL. Experiência com AWS.",
+      "source_url": "https://example.com/jobs/a-008",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…plataforma interna com Go, Kubernetes, Docker e PostgreSQL. Experiência com AWS.",
+      "source_url": "https://example.com/jobs/a-008",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Go",
+      "snippet": "Construir plataforma interna com Go, Kubernetes, Docker e PostgreSQL. Experiência com AWS.",
+      "source_url": "https://example.com/jobs/a-008",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "Kubernetes",
+      "snippet": "Construir plataforma interna com Go, Kubernetes, Docker e PostgreSQL. Experiência com AWS.",
+      "source_url": "https://example.com/jobs/a-008",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "…ma interna com Go, Kubernetes, Docker e PostgreSQL. Experiência com AWS.",
+      "source_url": "https://example.com/jobs/a-008",
+      "company": "synthetic-greenhouse"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "…stgreSQL. Diferenciais: Redis, Docker e AWS.\nModalidade: remoto. Time de pagamentos.",
+      "source_url": "https://example.org/vagas/b-101",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…tAPI e PostgreSQL. Diferenciais: Redis, Docker e AWS.\nModalidade: remoto. Time de pagamentos.",
+      "source_url": "https://example.org/vagas/b-101",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "…sênior para atuar com Python, FastAPI e PostgreSQL. Diferenciais: Redis, Docker e AWS.\nModalidade: remoto. Time de pagamentos.",
+      "source_url": "https://example.org/vagas/b-101",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Python",
+      "snippet": "Vaga sênior para atuar com Python, FastAPI e PostgreSQL. Diferenciais: Redis, Docker e AWS.\nModalidade: remoto. Time de pagamentos.",
+      "source_url": "https://example.org/vagas/b-101",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Redis",
+      "snippet": "…on, FastAPI e PostgreSQL. Diferenciais: Redis, Docker e AWS.\nModalidade: remoto. Time de pagamentos.",
+      "source_url": "https://example.org/vagas/b-101",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Pandas",
+      "snippet": "Modelagem preditiva com Python, Pandas e SQL. Experiência com Spark é desejável.\nHíbrido em Recife.",
+      "source_url": "https://example.org/vagas/b-102",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Python",
+      "snippet": "Modelagem preditiva com Python, Pandas e SQL. Experiência com Spark é desejável.\nHíbrido em Recife.",
+      "source_url": "https://example.org/vagas/b-102",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Spark",
+      "snippet": "…m Python, Pandas e SQL. Experiência com Spark é desejável.\nHíbrido em Recife.",
+      "source_url": "https://example.org/vagas/b-102",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "…odelagem preditiva com Python, Pandas e SQL. Experiência com Spark é desejável.\nHíbrido em Recife.",
+      "source_url": "https://example.org/vagas/b-102",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "JavaScript",
+      "snippet": "Buscamos júnior com JavaScript, TypeScript e React. Contato com Next.js no web.\nPresencial em Salvador.",
+      "source_url": "https://example.org/vagas/b-103",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "TypeScript",
+      "snippet": "Buscamos júnior com JavaScript, TypeScript e React. Contato com Next.js no web.\nPresencial em Salvador.",
+      "source_url": "https://example.org/vagas/b-103",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Airflow",
+      "snippet": "Pipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.\nSenioridade: sênior.",
+      "source_url": "https://example.org/vagas/b-104",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "Pipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.\nSenioridade: sênior.",
+      "source_url": "https://example.org/vagas/b-104",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "dbt",
+      "snippet": "Pipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.\nSenioridade: sênior.",
+      "source_url": "https://example.org/vagas/b-104",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Spark",
+      "snippet": "Pipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.\nSenioridade: sênior.",
+      "source_url": "https://example.org/vagas/b-104",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "…ipelines com Airflow, dbt, Spark e AWS. SQL diário. Vaga remota.\nSenioridade: sênior.",
+      "source_url": "https://example.org/vagas/b-104",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…PIs em Go (Golang), PostgreSQL e Redis. Docker no dia a dia.\nHíbrido.",
+      "source_url": "https://example.org/vagas/b-105",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Go",
+      "snippet": "APIs em Go (Golang), PostgreSQL e Redis. Docker no dia a dia.\nHíbrido.",
+      "source_url": "https://example.org/vagas/b-105",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "APIs em Go (Golang), PostgreSQL e Redis. Docker no dia a dia.\nHíbrido.",
+      "source_url": "https://example.org/vagas/b-105",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Redis",
+      "snippet": "APIs em Go (Golang), PostgreSQL e Redis. Docker no dia a dia.\nHíbrido.",
+      "source_url": "https://example.org/vagas/b-105",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "JavaScript",
+      "snippet": "…gio com foco em testes e fundamentos de JavaScript e SQL.\nPresencial.",
+      "source_url": "https://example.org/vagas/b-106",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "SQL",
+      "snippet": "…em testes e fundamentos de JavaScript e SQL.\nPresencial.",
+      "source_url": "https://example.org/vagas/b-106",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "Liderança técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads.\nModelo híbrido.",
+      "source_url": "https://example.org/vagas/b-107",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "GCP",
+      "snippet": "…técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads.\nModelo híbrido.",
+      "source_url": "https://example.org/vagas/b-107",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Java",
+      "snippet": "Liderança técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads.\nModelo híbrido.",
+      "source_url": "https://example.org/vagas/b-107",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Kubernetes",
+      "snippet": "Liderança técnica com Java, Kubernetes, Docker e GCP. Mentoria de squads.\nModelo híbrido.",
+      "source_url": "https://example.org/vagas/b-107",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "AWS",
+      "snippet": "…d: Python, FastAPI, PostgreSQL, Docker, AWS, Redis.\nHíbrido SP — deve deduplicar com board A.",
+      "source_url": "https://example.org/vagas/b-108",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Docker",
+      "snippet": "…tro board: Python, FastAPI, PostgreSQL, Docker, AWS, Redis.\nHíbrido SP — deve deduplicar com board A.",
+      "source_url": "https://example.org/vagas/b-108",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "PostgreSQL",
+      "snippet": "…licada em outro board: Python, FastAPI, PostgreSQL, Docker, AWS, Redis.\nHíbrido SP — deve deduplicar com board A.",
+      "source_url": "https://example.org/vagas/b-108",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Python",
+      "snippet": "Mesma vaga republicada em outro board: Python, FastAPI, PostgreSQL, Docker, AWS, Redis.\nHíbrido SP — deve deduplicar com board A.",
+      "source_url": "https://example.org/vagas/b-108",
+      "company": "synthetic-lever"
+    },
+    {
+      "skill": "Redis",
+      "snippet": "…thon, FastAPI, PostgreSQL, Docker, AWS, Redis.\nHíbrido SP — deve deduplicar com board A.",
+      "source_url": "https://example.org/vagas/b-108",
+      "company": "synthetic-lever"
+    }
+  ],
+  "gap": {
+    "demand_threshold": 5,
+    "rows": [
+      {
+        "skill": "Docker",
+        "market_frequency": 8,
+        "evidence_level": "none",
+        "status": "market_demand_no_evidence"
+      },
+      {
+        "skill": "AWS",
+        "market_frequency": 7,
+        "evidence_level": "none",
+        "status": "market_demand_no_evidence"
+      },
+      {
+        "skill": "PostgreSQL",
+        "market_frequency": 7,
+        "evidence_level": "none",
+        "status": "market_demand_no_evidence"
+      },
+      {
+        "skill": "Python",
+        "market_frequency": 6,
+        "evidence_level": "strong",
+        "status": "market_demand_with_evidence"
+      },
+      {
+        "skill": "SQL",
+        "market_frequency": 6,
+        "evidence_level": "working",
+        "status": "market_demand_with_evidence"
+      },
+      {
+        "skill": "JavaScript",
+        "market_frequency": 4,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Redis",
+        "market_frequency": 4,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Kubernetes",
+        "market_frequency": 3,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Spark",
+        "market_frequency": 3,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "TypeScript",
+        "market_frequency": 3,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "dbt",
+        "market_frequency": 3,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Airflow",
+        "market_frequency": 2,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "GCP",
+        "market_frequency": 2,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Go",
+        "market_frequency": 2,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Java",
+        "market_frequency": 2,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      },
+      {
+        "skill": "Pandas",
+        "market_frequency": 2,
+        "evidence_level": "none",
+        "status": "low_demand_no_evidence"
+      }
+    ]
+  }
+}
